@@ -25,7 +25,7 @@ function addGS(){
         },
         redirect: 'follow', // manual, *follow, error
         //referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify({first: "John", last:"Newperson",phone:"312-000-1212"}) // body data type must match "Content-Type" header
+        body: JSON.stringify({first: "John",phone:"312-000-1212", last:"Newperson"}) // body data type must match "Content-Type" header
       });
 }
 
