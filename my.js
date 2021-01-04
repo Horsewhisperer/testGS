@@ -26,8 +26,12 @@ function addGS(){
         redirect: 'follow', // manual, *follow, error
         //referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify({first: "John",phone:"312-000-1212", last:"Newperson"}) // body data type must match "Content-Type" header
-      }).then(r => {
+      })
+      .then(r => {
         document.getElementById("app").textContent = JSON.stringify(r);
+      })
+      .catch(err => {
+        document.getElementById("app").textContent = "Error sending post. Error Object: " + JSON.stringify(err);
       });
 
 }
