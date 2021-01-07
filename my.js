@@ -36,7 +36,12 @@ function addGS(){
 
 }
 
+function clearContents(){
+  document.getElementById("app").textContent = "";
+}
+
 document.getElementById("btn").addEventListener("click", testGS);
 
 document.getElementById("btn2").addEventListener("click", addGS);
 
+document.getElementById("btn3").addEventListener("click", clearContents);
