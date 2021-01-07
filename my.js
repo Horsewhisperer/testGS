@@ -6,8 +6,12 @@ function testGS(){
     fetch(url)
         .then(d => d.json())
         .then(d => {
-    
-            document.getElementById("app").textContent = d[0].status;
+            if (d[0].status = 200){
+              document.getElementById("app").textContent = JSON.stringify(d[0].data);
+            } else {
+              document.getElementById("app").textContent = "Error receiving data";
+            }
+
     
         })
 }
