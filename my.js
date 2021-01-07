@@ -7,7 +7,7 @@ function testGS(){
         .then(d => d.json())
         .then(d => {
             if (d[0].status = 200){
-              document.getElementById("app").textContent = JSON.stringify(d[0].data);
+              document.getElementById("app").textContent = d[0].data;
             } else {
               document.getElementById("app").textContent = "Error receiving data";
             }
